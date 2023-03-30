@@ -42,7 +42,7 @@ func main() {
 func rollDice(dice *int, times *int) []int {
 	var rolls []int
 	for i := 0; i < *times; i++ {
-		rolls = append(rolls, rand.Intn(*dice) + 1)
+		rolls = append(rolls, rand.Intn(*dice)+1)
 	}
 	return rolls
 }
@@ -63,7 +63,7 @@ func sumDice(rolls []int) int {
 
 func rollWithAdvantage(rolls []int) int {
 	sort.Ints(rolls)
-	return rolls[len(rolls) - 1]
+	return rolls[len(rolls)-1]
 }
 
 func rollWithDisadvantage(rolls []int) int {
